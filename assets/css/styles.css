@@ -1,0 +1,323 @@
+/* Fondo de la página */
+body {
+    background-color: #dcdcec; /* Azul claro */
+}
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #fffdfd;
+    color: #ac08ed;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+    background-color: #444;
+    color: #fff;
+}
+
+.navbar-toggler-icon {
+    color: #f9f8fa;
+}
+
+.position-relative .fas.fa-shopping-cart {
+    font-size: 20px;
+    color: #f8f9fa;
+}
+
+.cart-count-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #ff6347;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+.rating-stars {
+    color: #FFD700; /* Color dorado para las estrellas */
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    max-height: 700px; 
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    max-width: 400px;
+    background-color: #f5f5f5;
+    border-radius: 50px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: transparent;
+}
+
+.search-bar button {
+    border: none;
+    background-color: #4B0082; 
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button i {
+    color: white;
+    font-size: 20px;
+}
+
+.search-bar button:hover {
+    background-color: #8c42c0;
+}
+
+/* Estilo de tarjeta de producto */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    padding: 5px; /* Reduce el padding general de la tarjeta */
+    margin: 5px; /* Reduce el margen de la tarjeta */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 500px; /* Ajusta la altura para mantener consistencia */
+    object-fit: cover;
+    border-bottom: 1px solid #d619e0;
+}
+
+.card-title {
+    font-size: 1.2em;
+    color: hsl(288, 87%, 45%);
+    font-weight: bold;
+    margin-top: 10px;
+    margin: 0.3px 0; /* Reduce el margen superior e inferior */
+}
+
+.card-text {
+    font-size: 0.9em;
+    color: #d513d8;
+    margin: 0.3px 0; /* Reduce el margen superior e inferior */
+}
+
+.card-text strong {
+    color: #8027c0; /* Color del precio */
+    margin: 0.3px 0; /* Reduce el margen superior e inferior */
+}
+
+/* Botón Agregar al Carrito */
+.btn-primary {
+    background-color: #6a0dad;
+    border-color: #6a0dad;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #4B0082;
+    border-color: #4B0082;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #6a0dad;
+    color: #fff;
+    margin-top: 40px;
+}
+/* Estilos para los iconos en rectángulos */
+.icon-box {
+    width: 200px;
+    height: 60px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #f5e1c5; /* Color de fondo suave */
+    color: #8c5e34; /* Color del ícono */
+    margin-bottom: 10px; /* Espacio debajo del ícono */
+}
+
+.text-dark-brown {
+    color: #0a010b;
+}
+
+.bg-light-brown {
+    background-color: #1ce480;
+}
+
+.footer {
+    background-color: hsl(277, 19%, 65%);
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+.footer h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-icons i, .app-icons i, .payment-icons i {
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.payment-icons i {
+    font-size: 32px; /* Tamaño ajustado */
+    color: inherit; /* Muestra el color original del ícono */
+}
+
+.subscription-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.subscription-form .form-control {
+    flex: 1;
+}
+
+.subscription-form .btn {
+    flex-shrink: 0;
+}
+
+.footer-legal-links a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-legal-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-legal-links {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #777;
+}
+
+/* Ajusta el tamaño y la posición del botón */
+.add-to-cart-form .btn {
+    
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea el ícono a la izquierda */
+    width: auto; /* Ajusta el ancho al contenido */
+}
+
+/* Ajusta el estilo del ícono */
+.add-to-cart-form .btn i {
+    font-size: 1.5rem; /* Tamaño del ícono */
+    color: #010101; /* Color del ícono */
+}
+
+
+
+
+/* Seis columnas para pantallas grandes */
+@media (min-width: 992px) {
+    .col-md-2 {
+        flex: 0 0 16.66%;
+        max-width: 16.66%;
+    }
+}
+
+/* Tres columnas para pantallas medianas */
+@media (max-width: 991px) {
+    .col-md-2 {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
+
+/* Dos columnas para pantallas pequeñas */
+@media (max-width: 768px) {
+    .col-md-2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Una columna para pantallas extra pequeñas */
+@media (max-width: 576px) {
+    .col-md-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

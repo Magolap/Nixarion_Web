@@ -1,5 +1,5 @@
 <?php
-include('../../includes/config.php');  // Asegúrate de que la ruta sea correcta
+include('../../includes/config.php');  
 session_start();
 ?>
 
@@ -45,7 +45,7 @@ session_start();
         <div class="row">
             <?php
             $sql = "SELECT * FROM productos";
-            $stmt = $pdo->query($sql);  // Ejecutar la consulta
+            $stmt = $pdo->query($sql);  
             $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             foreach ($productos as $producto) {

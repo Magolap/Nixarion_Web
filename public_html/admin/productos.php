@@ -1,8 +1,8 @@
 <?php
 session_start();
-include '../../includes/config.php'; // Asegúrate de que esta ruta sea correcta
+include '../../includes/config.php'; 
 
-// Verificar si el usuario ha iniciado sesión como administrador
+
 if (!isset($_SESSION['admin_id'])) {
     header("Location: login.php");
     exit();
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit();
 }
 
-// Eliminar producto
+
 if (isset($_GET['eliminar'])) {
     $id = $_GET['eliminar'];
     $stmt = $pdo->prepare("DELETE FROM productos WHERE id = ?");
@@ -59,7 +59,7 @@ if (isset($_GET['eliminar'])) {
     exit();
 }
 
-// Obtener todos los productos
+
 $query = $pdo->query("SELECT * FROM productos");
 $productos = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -82,7 +82,7 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC);
         margin-top: 50px;
     }
     h1 {
-        color: #4a4a8e; /* Cambié el color del título a un morado suave */
+        color: #4a4a8e; 
         text-align: center;
         margin-bottom: 20px;
         font-size: 2em;
@@ -91,23 +91,23 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC);
         background: white;
         padding: 25px;
         border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra más suave */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
         margin-bottom: 20px;
     }
     .form-group label {
         font-weight: bold;
-        color: #4a4a8e; /* Cambié el color del texto */
+        color: #4a4a8e; 
     }
     .form-control, .form-control-file {
-        border-radius: 8px; /* Bordes redondeados para los campos */
-        border: 1px solid #d1d3d4; /* Color más claro en el borde */
+        border-radius: 8px; 
+        border: 1px solid #d1d3d4; 
     }
     .form-control:focus {
         border-color: #4a4a8e;
         box-shadow: 0 0 5px rgba(74, 74, 142, 0.5);
     }
     .btn-primary {
-        background-color: #4a4a8e; /* Cambié el color a morado */
+        background-color: #4a4a8e; 
         border: none;
         padding: 12px;
         font-weight: bold;
@@ -115,7 +115,7 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC);
         box-shadow: 0 4px 10px rgba(74, 74, 142, 0.3);
     }
     .btn-primary:hover {
-        background-color: #373769; /* Morado más oscuro al pasar el mouse */
+        background-color: #373769; 
     }
     table {
         background: white;
@@ -134,14 +134,14 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC);
         vertical-align: middle;
     }
     .btn-edit {
-        background-color: #4a90e2; /* Azul suave */
+        background-color: #4a90e2; 
         color: white;
         border-radius: 8px;
         padding: 6px 12px;
         margin: 2px;
     }
     .btn-delete {
-        background-color: #ff6b6b; /* Rojo suave */
+        background-color: #ff6b6b; 
         color: white;
         border-radius: 8px;
         padding: 6px 12px;

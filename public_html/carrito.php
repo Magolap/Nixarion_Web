@@ -1,13 +1,13 @@
 <?php
 session_start();
-// Maneja el botón "Vaciar Carrito"
+
 if (isset($_POST['vaciar_carrito'])) {
-    unset($_SESSION['carrito']); // Vacía el carrito
-    header("Location: carrito.php"); // Recarga la página para reflejar los cambios
+    unset($_SESSION['carrito']); 
+    header("Location: carrito.php"); 
     exit();
 }
 
-// Verifica si se envió la solicitud para eliminar un producto específico
+
 if (isset($_POST['eliminar_producto'])) {
     $id_producto = $_POST['id_producto'];
 
@@ -16,11 +16,11 @@ if (isset($_POST['eliminar_producto'])) {
         unset($_SESSION['carrito'][$id_producto]);
     }
 
-    header("Location: carrito.php"); // Recarga la página
+    header("Location: carrito.php"); 
     exit();
 }
 
-// Si el carrito está vacío, inicializa la variable
+
 $carrito = $_SESSION['carrito'] ?? [];
 ?>
 
@@ -77,7 +77,7 @@ $carrito = $_SESSION['carrito'] ?? [];
                     Vaciar Carrito
                 </button>
             </form>
-            <!-- Agregar debajo del botón "Vaciar Carrito" -->
+         
              <form action="realizar_pedido.php" method="POST">
                 <button type="submit" class="btn btn-success w-100 mt-2">Realizar Pedido</button>
              </form>

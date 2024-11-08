@@ -132,13 +132,13 @@ $query = $_GET['query'] ?? '';
         
         echo "<h1>Buscaste: " . htmlspecialchars($query) . "</h1>";
 
-        // Preparar la consulta para buscar en la base de datos
+        
         $sql = "SELECT * FROM productos WHERE nombre LIKE ? OR descripcion LIKE ?";
-        $stmt = $pdo->prepare($sql); // Usar $pdo en lugar de $conn
+        $stmt = $pdo->prepare($sql); 
         $searchTerm = '%' . $query . '%';
-        $stmt->execute([$searchTerm, $searchTerm]); // Ejecutar la consulta con los parámetros
+        $stmt->execute([$searchTerm, $searchTerm]); 
 
-        // Obtener y mostrar los productos encontrados
+       
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo "<div class='search-results'>";
         if (count($result) > 0) {
@@ -154,20 +154,20 @@ $query = $_GET['query'] ?? '';
                 echo "<p class='product-price'>Precio: " . number_format($producto['precio'], 2) . " COP</p>";
                 echo "<form method='post' action='agregar_carrito.php' class='add-to-cart-form'>";
                 echo "<input type='hidden' name='id_producto' value='" . $producto['id'] . "'>";
-                echo "<input type='hidden' name='cantidad' value='1'>"; // Fijar la cantidad a 1
+                echo "<input type='hidden' name='cantidad' value='1'>"; 
                 echo "<button type='submit' class='add-to-cart btn btn-primary'><i class='fas fa-shopping-cart'></i> Añadir al carrito</button>";
                 echo "</form>";
-                echo "</div>"; // .product-details
-                echo "</div>"; // .product
+                echo "</div>"; 
+                echo "</div>"; 
             }
         } else {
             echo "<h2>No se encontraron resultados para: " . htmlspecialchars($query) . "</h2>";
         }
-        echo "</div>"; // .search-results
+        echo "</div>"; 
         ?>
-    </div> <!-- .container -->
+    </div> <
 
-    <!-- Notificación de confirmación -->
+   
     <div id="notification">Producto añadido al carrito con éxito.</div>
 
     <script>
@@ -185,7 +185,7 @@ $query = $_GET['query'] ?? '';
                 .then(data => {
                     if (data.success) {
                         const cartCount = document.getElementById('cart-count');
-                        cartCount.textContent = data.cartCount; // Actualiza el contador
+                        cartCount.textContent = data.cartCount; 
                         
                        
                     } else {

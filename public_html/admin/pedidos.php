@@ -1,8 +1,8 @@
 <?php
-// Conexión con la base de datos
+
 require_once '../../includes/config.php';
 
-// Cambiar el estado del pedido si se envía el formulario
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cambiar_estado'])) {
     $pedido_id = $_POST['pedido_id'];
     $nuevo_estado = $_POST['estado'];
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cambiar_estado'])) {
     exit();
 }
 
-// Obtener todos los pedidos
+
 $query = "SELECT * FROM pedidos";
 $stmt = $pdo->query($query);
 $pedidos = $stmt->fetchAll(PDO::FETCH_ASSOC);

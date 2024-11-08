@@ -54,7 +54,7 @@ $productos = obtenerProductos($pdo);
         </div>
     </header>
 
-    <!-- Slider -->
+   
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -138,39 +138,37 @@ $productos = obtenerProductos($pdo);
         <?php foreach ($productos as $producto): ?>
             <div class="col-md-3 mb-4">
                 <div class="card h-100">
-                    <!-- Imagen del producto -->
+                   
                     <img src="<?= htmlspecialchars($producto['imagen']); ?>" class="card-img-top" alt="<?= htmlspecialchars($producto['nombre']); ?>">
                     
                     <div class="card-body">
-                        <!-- Título del producto -->
+                        
                         <h5 class="card-title"><?= htmlspecialchars($producto['nombre']); ?></h5>
                         
-                        <!-- Descripción del producto -->
+                        
                         <p class="card-text"><?= htmlspecialchars($producto['descripcion']); ?></p> 
                         
-                        <!-- Precio del producto -->
+                       
                         <p class="card-text">Precio: $<?= number_format($producto['precio'], 2); ?> COP</p>
                         
-                        <!-- Calificación en estrellas -->
+                      
                         <div class="rating-stars mb-2">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i> <!-- Ejemplo de 4 estrellas -->
+                            <i class="far fa-star"></i> 
                         </div>
-                        
-                        <!-- Formulario para agregar al carrito -->
                         <form method="post" action="agregar_carrito.php" class="add-to-cart-form">
                             <input type="hidden" name="id_producto" value="<?= $producto['id']; ?>">
                             
                             <div class="d-flex align-items-center">
-                                <!-- Campo de cantidad -->
+                               
                                 <input type="number" name="cantidad" value="1" min="1" max="<?= $producto['stock']; ?>" class="form-control me-2" style="width: 60px;">
                                 
-                                <!-- Botón de agregar al carrito -->
+                               
                                 <button type="submit" class="btn btn-primary d-flex align-items-center">
-                                    <i class="fas fa-shopping-cart"></i> <!-- Ícono del carrito -->
+                                    <i class="fas fa-shopping-cart"></i> 
                                 </button>
                             </div>
                         </form>
@@ -188,7 +186,7 @@ $productos = obtenerProductos($pdo);
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <!-- Sección Sobre Nosotros -->
+         
             <div class="col-md-3">
                 <h5>SOBRE NOSOTROS</h5>
                 <ul class="footer-links">
@@ -198,7 +196,7 @@ $productos = obtenerProductos($pdo);
                     <li><a href="#">Sala de prensa</a></li>
                 </ul>
             </div>
-            <!-- Sección Ayuda y Apoyo -->
+         
             <div class="col-md-3">
                 <h5>AYUDA & APOYO</h5>
                 <ul class="footer-links">
@@ -211,7 +209,7 @@ $productos = obtenerProductos($pdo);
                     
                 </ul>
             </div>
-            <!-- Sección Servicio al Cliente -->
+    
             <div class="col-md-3">
                 <h5>SERVICIO AL CLIENTE</h5>
                 <ul class="footer-links">
@@ -220,7 +218,7 @@ $productos = obtenerProductos($pdo);
                     <li><a href="#">Puntos</a></li>
                 </ul>
             </div>
-            <!-- Sección Redes Sociales y App -->
+         
             <div class="col-md-3 text-center">
                 <h5>ENCUÉNTRANOS EN</h5>
                 <div class="social-icons">
@@ -240,7 +238,7 @@ $productos = obtenerProductos($pdo);
             </div>
         </div>
 
-        <!-- Suscripción y Medios de Pago -->
+      
         <div class="row mt-4">
             <div class="col-md-6">
                 <h5>SUSCRÍBETE PARA RECIBIR OFERTAS EXCLUSIVAS, PROMOCIONES Y NOTICIAS</h5>
@@ -263,7 +261,6 @@ $productos = obtenerProductos($pdo);
             </div>
         </div>
 
-        <!-- Derechos reservados -->
         <div class="row mt-4 text-center">
             <div class="col-md-12">
                 <p>©2009-2024 NIXARION Todos los derechos reservados</p>

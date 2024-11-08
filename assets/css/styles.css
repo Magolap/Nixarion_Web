@@ -1,6 +1,6 @@
-/* Fondo de la página */
+
 body {
-    background-color: #dcdcec; /* Azul claro */
+    background-color: #dcdcec; 
 }
 .container {
     width: 100%;
@@ -63,7 +63,7 @@ body {
 }
 
 .rating-stars {
-    color: #FFD700; /* Color dorado para las estrellas */
+    color: #FFD700; 
 }
 .carousel-inner img {
     width: 100%;
@@ -71,7 +71,7 @@ body {
     max-height: 700px; 
 }
 
-/* Barra de búsqueda */
+
 .search-bar {
     display: flex;
     align-items: center;
@@ -112,7 +112,7 @@ body {
     background-color: #8c42c0;
 }
 
-/* Estilo de tarjeta de producto */
+
 .card {
     border: none;
     border-radius: 10px;
@@ -122,10 +122,9 @@ body {
     height: 100%; 
     display: flex;
     flex-direction: column;
-    padding: 5px; /* Reduce el padding general de la tarjeta */
-    margin: 5px; /* Reduce el margen de la tarjeta */
+    padding: 5px; 
+    margin: 5px; 
 }
-
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -133,7 +132,7 @@ body {
 
 .card img {
     width: 100%;
-    height: 500px; /* Ajusta la altura para mantener consistencia */
+    height: 500px; 
     object-fit: cover;
     border-bottom: 1px solid #d619e0;
 }
@@ -143,21 +142,21 @@ body {
     color: hsl(288, 87%, 45%);
     font-weight: bold;
     margin-top: 10px;
-    margin: 0.3px 0; /* Reduce el margen superior e inferior */
+    margin: 0.3px 0; 
 }
 
 .card-text {
     font-size: 0.9em;
     color: #d513d8;
-    margin: 0.3px 0; /* Reduce el margen superior e inferior */
+    margin: 0.3px 0; 
 }
 
 .card-text strong {
-    color: #8027c0; /* Color del precio */
-    margin: 0.3px 0; /* Reduce el margen superior e inferior */
+    color: #8027c0; 
+    margin: 0.3px 0; 
 }
 
-/* Botón Agregar al Carrito */
+
 .btn-primary {
     background-color: #6a0dad;
     border-color: #6a0dad;
@@ -179,7 +178,7 @@ footer {
     color: #fff;
     margin-top: 40px;
 }
-/* Estilos para los iconos en rectángulos */
+
 .icon-box {
     width: 200px;
     height: 60px;
@@ -187,9 +186,9 @@ footer {
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    background-color: #f5e1c5; /* Color de fondo suave */
-    color: #8c5e34; /* Color del ícono */
-    margin-bottom: 10px; /* Espacio debajo del ícono */
+    background-color: #f5e1c5; 
+    color: #8c5e34; 
+    margin-bottom: 10px; 
 }
 
 .text-dark-brown {
@@ -235,8 +234,8 @@ footer {
 }
 
 .payment-icons i {
-    font-size: 32px; /* Tamaño ajustado */
-    color: inherit; /* Muestra el color original del ícono */
+    font-size: 32px; 
+    color: inherit; 
 }
 
 .subscription-form {
@@ -269,7 +268,7 @@ footer {
     color: #777;
 }
 
-/* Ajusta el tamaño y la posición del botón */
+
 .add-to-cart-form .btn {
     
     border: none;
@@ -277,20 +276,20 @@ footer {
     padding: 10px;
     display: inline-flex;
     align-items: center;
-    justify-content: flex-start; /* Alinea el ícono a la izquierda */
-    width: auto; /* Ajusta el ancho al contenido */
+    justify-content: flex-start; 
+    width: auto; 
 }
 
-/* Ajusta el estilo del ícono */
+
 .add-to-cart-form .btn i {
-    font-size: 1.5rem; /* Tamaño del ícono */
-    color: #010101; /* Color del ícono */
+    font-size: 1.5rem;
+    color: #010101; 
 }
 
 
 
 
-/* Seis columnas para pantallas grandes */
+
 @media (min-width: 992px) {
     .col-md-2 {
         flex: 0 0 16.66%;
@@ -298,7 +297,7 @@ footer {
     }
 }
 
-/* Tres columnas para pantallas medianas */
+
 @media (max-width: 991px) {
     .col-md-2 {
         flex: 0 0 33.33%;
@@ -306,7 +305,7 @@ footer {
     }
 }
 
-/* Dos columnas para pantallas pequeñas */
+
 @media (max-width: 768px) {
     .col-md-2 {
         flex: 0 0 50%;
@@ -314,7 +313,7 @@ footer {
     }
 }
 
-/* Una columna para pantallas extra pequeñas */
+
 @media (max-width: 576px) {
     .col-md-2 {
         flex: 0 0 100%;

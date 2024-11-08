@@ -1,5 +1,5 @@
 <?php
-// Conectar con la base de datos
+
 require_once '../../includes/config.php';
 
 function hashPassword($password) {

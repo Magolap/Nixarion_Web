@@ -89,7 +89,7 @@
         .content img {
             max-width: 100%;
             height: auto;
-            opacity: 0.5; /* Imagen de fondo con transparencia */
+            opacity: 0.5; 
             position: absolute;
         }
         .notification {

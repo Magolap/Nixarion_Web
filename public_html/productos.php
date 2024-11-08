@@ -17,19 +17,19 @@ $productos = obtenerProductos($pdo);
 
     <style>
         .rating-stars {
-            color: #FFD700; /* Color dorado para las estrellas */
+            color: #FFD700; 
         }
         .carousel-inner img {
             width: 100%;
             height: 100%;
             max-height: 700px; 
         }
-        /* Fondo de la página */
+        
 body {
-    background-color: #eae7ec; /* Azul claro */
+    background-color: #eae7ec; 
 }
 
-/* Barra de búsqueda */
+
 .search-bar {
     display: flex;
     align-items: center;
@@ -70,13 +70,13 @@ body {
     background-color: #6A0DAD;
 }
 
-/* Contenedor de productos */
+
 .container {
     max-width: 1200px;
     margin-top: 40px;
 }
 
-/* Estilo de tarjeta de producto */
+
 .card {
     border: none;
     border-radius: 10px;
@@ -95,7 +95,7 @@ body {
 
 .card img {
     width: 100%;
-    height: 250px; /* Ajusta la altura para mantener consistencia */
+    height: 250px; 
     object-fit: cover;
     border-bottom: 1px solid #ddd;
 }
@@ -113,10 +113,10 @@ body {
 }
 
 .card-text strong {
-    color: #4B0082; /* Color del precio */
+    color: #4B0082; 
 }
 
-/* Botón Agregar al Carrito */
+
 .btn-primary {
     background-color: #6a0dad;
     border-color: #6a0dad;
@@ -130,7 +130,7 @@ body {
     border-color: #4B0082;
 }
 
-/* Pie de página */
+
 footer {
     text-align: center;
     padding: 20px;
@@ -180,7 +180,7 @@ footer {
                                 <p class="card-text"><?= $producto['descripcion']; ?></p>
                                 <p class="card-text"><strong>Precio: <?= number_format($producto['precio'], 2); ?> COP</strong></p>
                                 <p class="card-text">Stock: <?= $producto['stock']; ?></p>
-                                <!-- Formulario para agregar al carrito -->
+                                
                                 <form action="agregar_carrito.php" method="POST">
                                     <input type="hidden" name="id" value="<?= $producto['id']; ?>">
                                     <input type="number" name="cantidad" min="1" max="<?= $producto['stock']; ?>" value="1" class="form-control mb-2">
@@ -200,7 +200,7 @@ footer {
         <p>© 2024 NIXARION. Todos los derechos reservados.</p>
     </footer>
     
-    <!-- Bootstrap JS and dependencies -->
+   
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

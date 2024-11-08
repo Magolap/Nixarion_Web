@@ -6,7 +6,7 @@ if (!isset($_SESSION['es_admin']) || !$_SESSION['es_admin']) {
 }
 include('../includes/config.php');
 
-// Obtener estadísticas rápidas
+
 $totalProductos = $pdo->query("SELECT COUNT(*) FROM productos")->fetchColumn();
 $totalUsuarios = $pdo->query("SELECT COUNT(*) FROM usuarios")->fetchColumn();
 $totalPedidos = $pdo->query("SELECT COUNT(*) FROM pedidos")->fetchColumn();

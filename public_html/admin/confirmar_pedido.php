@@ -1,10 +1,10 @@
 <?php
-require_once '../../includes/config.php';  // Conexión a la base de datos
+require_once '../../includes/config.php';  
 session_start();
 
 try {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Verificar si todos los campos necesarios están presentes
+       
         if (
             isset($_POST['cliente'], $_POST['direccion'], $_POST['telefono'], $_POST['metodo_pago'], $_POST['total'])
         ) {
@@ -14,17 +14,16 @@ try {
             $metodo_pago = $_POST['metodo_pago'];
             $total = $_POST['total'];
 
-            // Preparar la consulta SQL para insertar el pedido
+           
             $query = "INSERT INTO pedidos (cliente, direccion, telefono, metodo_pago, total, estado, fecha_pedido)
                       VALUES (?, ?, ?, ?, ?, 'Pendiente', NOW())";
             $stmt = $pdo->prepare($query);
 
-            // Ejecutar la consulta para insertar el pedido
             if ($stmt->execute([$cliente, $direccion, $telefono, $metodo_pago, $total])) {
-                // Obtener el ID del pedido insertado
+                
                 $pedido_id = $pdo->lastInsertId();
 
-                // Guardar detalles del pedido
+               
                 foreach ($_SESSION['carrito'] as $item) {
                     $producto_id = $item['id'];
                     $cantidad = $item['cantidad'];
@@ -36,10 +35,10 @@ try {
                     $stmt_detalle->execute([$pedido_id, $producto_id, $cantidad, $precio_unitario]);
                 }
 
-                // Vaciar el carrito después de confirmar el pedido
+            
                 unset($_SESSION['carrito']);
 
-                // Redirigir al usuario a una página de confirmación
+              
                 header('Location: confirmacion.php');
                 exit();
             } else {
@@ -50,7 +49,7 @@ try {
         }
     }
 } catch (Exception $e) {
-    // Mostrar el error para depuración
+  
     echo "Error: " . $e->getMessage();
 }
 ?>
